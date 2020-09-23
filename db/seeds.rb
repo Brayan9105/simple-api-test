@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do
+  nombre = Faker::Creature::Dog.name
+  creado_por = Faker::Name.unique.name
+  Checklist.create(nombre: nombre, creado_por: creado_por)
+end
