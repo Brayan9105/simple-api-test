@@ -1,5 +1,6 @@
 class ChecklistsController < ApplicationController
   before_action :set_checklist, only: [:show, :update, :destroy]
+
   def index
     @checklists = Checklist.all
     json_response(@checklists)
@@ -26,7 +27,7 @@ class ChecklistsController < ApplicationController
 
   private
     def checklist_params
-      params.require(:checklist).permit(:nombre, :creado_por)
+      params.permit(:nombre, :creado_por)
     end
 
     def set_checklist

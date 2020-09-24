@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
   belongs_to :checklist
 
-  validates_presences_of :nombre
+  validates_presence_of :nombre
 end
